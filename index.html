@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>可恢复分支表单</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="app-title">
+        <header class="app-header">
+          <div>
+            <p class="eyebrow">XState 风格自研状态机 · IndexedDB · Web Worker</p>
+            <h1 id="app-title">多步分支表单</h1>
+          </div>
+          <div id="statusBadge" class="status-badge" aria-live="polite"></div>
+        </header>
+        <nav id="stepNav" class="step-nav" aria-label="表单步骤"></nav>
+        <form id="form" class="form-card"></form>
+      </section>
+      <aside class="inspector" aria-labelledby="inspector-title">
+        <h2 id="inspector-title">草稿与状态</h2>
+        <div class="actions-grid">
+          <button id="shareButton" class="secondary" type="button">复制分享链接</button>
+          <button id="exportButton" class="secondary" type="button">导出 JSON</button>
+          <button id="importButton" class="secondary" type="button">导入 JSON</button>
+          <button id="resetButton" class="danger" type="button">新建草稿</button>
+        </div>
+        <input id="importFile" type="file" accept="application/json,.json" hidden />
+        <label class="toggle-row">
+          <input id="slowToggle" type="checkbox" />
+          放大异步校验延迟
+        </label>
+        <p id="draftMeta" class="draft-meta"></p>
+        <h3>可序列化快照</h3>
+        <pre id="snapshotPreview"></pre>
+      </aside>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
