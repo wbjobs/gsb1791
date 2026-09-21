@@ -1,0 +1,11 @@
+{
+  "name": "branching-form-machine",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Multi-step form with branching, drafts, dependency-aware async validation. XState-style machine + IndexedDB + Web Worker. Zero dependencies.",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "serve": "node server.js"
+  }
+}
